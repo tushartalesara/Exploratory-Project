@@ -1,38 +1,276 @@
-.App {
-  text-align: center;
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+    height: 10vh;
+    background-color: #242424;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header .clock{
+    position: absolute;
+    right: 0;
+    text-align: center;
+    padding: 1em 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header .clock .clocki{
+    color: #242424;
 }
-
-.App-link {
-  color: #61dafb;
+.home{
+    display: flex;
+    font-size: 30px;
+    width: 100%;
+    height: 50vh;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.status{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+    width: 25%;
+    padding: 5px;
+    font-size: 28px;
+    border: 2px solid red;
+    color: rgb(252, 129, 129);
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.status h3{
+    color: red;
+    font-size: 40px;
+    text-align: center;
+}
+.rt input{
+    margin-left: 5px;
+}
+.rt .label1{
+    margin-right: 5px;
+}
+.rt .label2{
+    margin-right: 25px;
+}
+.network{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 50%;
+    border: 2px solid rgb(75, 200, 20);
+    color: rgb(75, 200, 20);
+    margin-bottom: 5px; 
+    margin-top: 5px;
+}
+.subnet{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hosts{
+    width: 100%;
+    display: flex;
+}
+.hosts > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hosts .host1,.host2,.host3{
+    border: 2px solid rgb(75, 200, 20);
+    border-radius: 50%;
+}
+.line{
+    border-left: 3px solid rgb(75, 200, 20);
+    height: 125px;
+}
+.lineh{
+    border-bottom: 3px solid rgb(75,200,20);
+    width: 100%;
+    position: relative;
+    top: 90px;
+}
+.Router{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 35%;
+    border: 2px solid rgb(75, 200, 20);
+    border-radius: 30px;
+}
+.ip{
+    margin: 0px 2px;
+}
+.host1,.host2,.host3{
+    padding: 5px;
+}
+.host1:hover,.host2:hover,.host3:hover, .Router:hover{
+    background-color: rgb(75, 200, 20);
+    color: white;
+}
+.log{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    width: 25%;
+    padding: 5px;
+    font-size: 20px;
+    border: 2px solid red;
+    color: rgb(252, 129, 129);
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.log h3{
+    color: red;
+    text-align: center;
+    font-size: 40px;
+}
+.log-items{
+    overflow: auto;
+}
+.footer{
+    padding: 10px;
+    border: 2px solid darkorange;
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    min-height: 45vh;
+    align-items: center;  
+}
+.btn{
+    display: none;
+}
+.footer .btn-active{
+    height: 50px;
+    width: 150px;
+    color: white;
+    background-color: darkorange;
+    font-size: large;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.footer .btn-active:hover{
+    background-color: orange;
+}
+.action{
+    color: orange;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.action .close-btn{
+    position: relative;
+    left: 700px;
+    height: 40px;
+    width: 90px;
+    border: none;
+    font-size: large;
+    border-radius: 10px;
+    color: #fff;
+    background-color: darkorange;
+}
+.action .close-btn:hover{
+    background-color: red;
+}
+.action .form-active{
+    color: darkorange;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+}
+.headings{
+    display: flex;
+    width: 965px;
+    margin-left: 115px;
+    justify-content: space-around;
+}
+.form{
+    display: none;
+}
+.action .form-active input{
+    border: 0.2px solid orange;
+    border-radius: 10px;
+    padding: 0px 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    width: 300px;
+    color: orange;
+}
+.machine1{
+    margin-top: 10px;   
+}
+.action .form-active input:focus{
+    outline: none;
+    border: 0.2px solid orangered;
+}
+.lu-inp{
+    font-size: large;
+    color: darkorange;
+    width: 40%;
+    height: 250px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.lu-inp input{
+    border: 0.2px solid orange;
+    border-radius: 10px;
+    padding: 0px 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    color: orange;
+}
+.lu-inp input:focus{
+    outline: none;
+    border: 0.2px solid orangered;
+}
+.bn-btn{
+    margin: 0 10px;
+    width: 90px;
+    height: 40px;
+    font-size: medium;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: darkorange;
+}
+.bn-btn:hover{
+    background-color: orange;
+}
+.lu{
+    width: 100%;
+    display: flex;
+}
+.lu table{
+    width: 60%;
+    padding: 0 20px;
+    height: 250px;
+}
+.lu td,th{
+    border: 1px solid darkorange;
+    text-align: center;
+    border-radius: 5px;
+    width: 33%;
+}
+.rp{
+    height: 50px;
+    width: 100px;
 }
