@@ -8,7 +8,7 @@ function Lookup(props) {
     // click is true packet is not recieved yet, when user clicks recieve packet then click be changed to false thus indicating packet is recievedd
     const [clk, setCLk] = useState(true)
     // Variable to store some of the data which are required from session storage
-    if(sessionStorage.getItem("NI")!==null){
+    if(sessionStorage.getItem("NI")!==null ){
         addr = ipaddr.parse(sessionStorage.getItem("NI"))
         A = addr.octets[0]; B = addr.octets[1]; C = addr.octets[2]; D = addr.octets[3]
         p[0] = sessionStorage.getItem("M4")
